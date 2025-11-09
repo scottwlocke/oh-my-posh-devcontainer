@@ -9,7 +9,7 @@ ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
 # Install powershell
-ARG PS_VERSION="7.5.2"
+ARG PS_VERSION="7.5.4"
 # powershell-7.3.0-linux-x64.tar.gz
 # powershell-7.3.0-linux-arm64.tar.gz
 RUN ARCH="$(dpkg --print-architecture)"; \
